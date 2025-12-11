@@ -1,0 +1,335 @@
+{
+  "main": {
+    "id": "805e9533a21f62d9",
+    "type": "split",
+    "children": [
+      {
+        "id": "f48416450bb0726e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "294a707242e3abc6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Work/Weekly Fab/Archive/Fab. 2024-09-04.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Fab. 2024-09-04"
+            }
+          },
+          {
+            "id": "01fc5df37f692914",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Work/Weekly Fab/Archive/Fab. 2025-02-19.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Fab. 2025-02-19"
+            }
+          },
+          {
+            "id": "0543e8de7114442a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Work/Weekly Fab/Fab..md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Fab."
+            }
+          },
+          {
+            "id": "342b688d16041fee",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Work/R&D/Notes/SM G3.0/SM G3.0 May 2025 (Final).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "SM G3.0 May 2025 (Final)"
+            }
+          },
+          {
+            "id": "53ceb233f57ea4b4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Work/R&D/Notes/SM G3.0/SM G3.0 May 2025 (Final).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "SM G3.0 May 2025 (Final)"
+            }
+          },
+          {
+            "id": "92740bf4c5888a4b",
+            "type": "leaf",
+            "state": {
+              "type": "webviewer",
+              "state": {
+                "url": "https://share.note.sx/ss3xnkj9#GOKMt6ngttWYteDjNMkc5szl4keLXCjiwx3OY1VTmAs",
+                "title": "Fab.",
+                "mode": "webview"
+              },
+              "icon": "globe-2",
+              "title": "Fab."
+            }
+          },
+          {
+            "id": "ee3366a12cd44d94",
+            "type": "leaf",
+            "state": {
+              "type": "webviewer",
+              "state": {
+                "url": "https://share.note.sx/ss3xnkj9#GOKMt6ngttWYteDjNMkc5szl4keLXCjiwx3OY1VTmAs",
+                "title": "Fab.",
+                "mode": "webview"
+              },
+              "icon": "globe-2",
+              "title": "Fab."
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "3213869979d903ef",
+    "type": "split",
+    "children": [
+      {
+        "id": "f4e4a814d5b06e15",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "60ae9b536be8c32f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "bac94e030a6d80d7",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:R_D",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "1deed05915badf1e",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "cc2633a465c6167d",
+    "type": "split",
+    "children": [
+      {
+        "id": "c2516e58523e9820",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2a2ea2ca8be9c467",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Work/Weekly Fab/Fab..md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Fab."
+            }
+          },
+          {
+            "id": "6fbe4f7a4a16202a",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Work/Weekly Fab/Fab..md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Fab."
+            }
+          },
+          {
+            "id": "c06fe80746a4c987",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "765600434b9f4962",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Pasted image 20250513230923.png",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Pasted image 20250513230923"
+            }
+          },
+          {
+            "id": "1e438bff5c2491b6",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          },
+          {
+            "id": "24f909f2c5fca31c",
+            "type": "leaf",
+            "state": {
+              "type": "copilot-chat-view",
+              "state": {},
+              "icon": "message-square",
+              "title": "Copilot"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 261.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "publish:Publish changes...": false,
+      "workspaces:Manage workspace layouts": false,
+      "obsidian-git:Open Git source control": false,
+      "copilot:Open Copilot Chat": false
+    }
+  },
+  "active": "53ceb233f57ea4b4",
+  "lastOpenFiles": [
+    "Pasted image 20250610140824.png",
+    "Pasted image 20250602161347.png",
+    "Pasted image 20250602161322.png",
+    "Pasted image 20250602161303.png",
+    "Pasted image 20250602161255.png",
+    "Pasted image 20250602161225.png",
+    "Work/R&D/Notes/SM G3.0/SM G3.0 Phase (1,2) BE.md",
+    "Work/R&D/Notes/SM G3.0/SM Meeting.md",
+    "Templates and Formatting.md",
+    "SM Ongoing Tasks Overview.canvas",
+    "SM Ongoing Tasks Overview.md",
+    "Work/Weekly Fab/Fab..md",
+    "RP Migration 19_03_2025.md",
+    "Work/Eval Reminder.md",
+    "Study/Transformers and Attebtion/Transformers and Attention.md",
+    "Work/Semi-Automatic Messages.md",
+    "Work/Serialization STD.md",
+    "Ongoing SW.md",
+    "Work/Trainings.md",
+    "Work/R&D/Notes/SM G3.0/SM G3.0 May 2025 (Final).md",
+    "Study/EPLAN/Images/Pasted image 20250602161028.png",
+    "Study/EPLAN/Images/Pasted image 20250602161014.png",
+    "Study/EPLAN/Images/Pasted image 20250602160515.png",
+    "Study/EPLAN/Images/Pasted image 20250602160451.png",
+    "Study/EPLAN/Images/Pasted image 20250602160036.png",
+    "Study/EPLAN/Images",
+    "Study/EPLAN/EPLAN Notes.md",
+    "Study/EPLAN",
+    "Work/R&D/Notes/R&D.md",
+    "Work/R&D/Notes/STC Machiene/STC (Ser. Tamper CW).md",
+    "Work/R&D/Notes/SM G3.0/GS1 Serial_SSCC Generation.md",
+    "2025-04-14.md",
+    "Work/Weekly Fab/Archive/Fab. 2025-02-19.md",
+    "Work/R&D/Notes/OGN_SM Planning.md",
+    "Work/Weekly Fab/Archive/Fab. 2024-09-04.md",
+    "Work/Weekly Fab/Archive",
+    "conflict-files-obsidian-git.md",
+    "Study/Transformers/Transformers and Attention.md",
+    "Study/Transformers/Images",
+    "Study/Transformers",
+    "Study/Github/Images",
+    "Study/Github/Git and Github.md",
+    "Study/Github",
+    "Study/Transformers and Attebtion/Screenshots",
+    "Study/Transformers and Attebtion/Lesson_9 (Encoder-Decoder and Multihead attention).ipynb",
+    "Study/Transformers and Attebtion/Unconfirmed 978374.crdownload",
+    "Study/Transformers and Attention.md",
+    "Work/R&D/CNV/Compression.canvas",
+    "Work/R&D/CNV/SM Ser. Agg. Seuence of Upload.canvas",
+    "Untitled.canvas",
+    "Arch.canvas",
+    "Arch..canvas"
+  ]
+}

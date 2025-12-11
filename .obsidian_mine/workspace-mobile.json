@@ -1,0 +1,222 @@
+{
+  "main": {
+    "id": "a43beb0c444fab60",
+    "type": "split",
+    "children": [
+      {
+        "id": "5c0f10cbf342de01",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "249e70535de9218f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SM Ongoing Tasks Overview.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "SM Ongoing Tasks Overview"
+            }
+          },
+          {
+            "id": "03f16853dd30f948",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Work/Serialization STD.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Serialization STD"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "88563ce601246cca",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "40fbfd42f33aaaab",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {
+            "sortOrder": "alphabetical",
+            "autoReveal": false
+          },
+          "icon": "lucide-folder-closed",
+          "title": "Files"
+        }
+      },
+      {
+        "id": "634f290764df50f6",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          },
+          "icon": "lucide-search",
+          "title": "Search"
+        }
+      },
+      {
+        "id": "73fb1c4fe6c99f73",
+        "type": "leaf",
+        "state": {
+          "type": "tag",
+          "state": {
+            "sortOrder": "frequency",
+            "useHierarchy": true,
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-tags",
+          "title": "Tags"
+        }
+      },
+      {
+        "id": "9386ce000db65f33",
+        "type": "leaf",
+        "state": {
+          "type": "bookmarks",
+          "state": {},
+          "icon": "lucide-bookmark",
+          "title": "Bookmarks"
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "right": {
+    "id": "e8bfc34f18e6bf6f",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "0f86abf68b1be1b2",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "file": "Work/Notes Meeting 19_2_2025.md",
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
+          },
+          "icon": "links-coming-in",
+          "title": "Backlinks"
+        }
+      },
+      {
+        "id": "1df09571444b18b9",
+        "type": "leaf",
+        "state": {
+          "type": "outgoing-link",
+          "state": {
+            "file": "Work/Notes Meeting 19_2_2025.md",
+            "linksCollapsed": false,
+            "unlinkedCollapsed": true
+          },
+          "icon": "links-going-out",
+          "title": "Outgoing links"
+        }
+      },
+      {
+        "id": "e8d35cb3a00c18c3",
+        "type": "leaf",
+        "state": {
+          "type": "outline",
+          "state": {
+            "file": "Work/Notes Meeting 19_2_2025.md",
+            "followCursor": false,
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-list",
+          "title": "Outline"
+        }
+      }
+    ],
+    "currentTab": 3
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "03f16853dd30f948",
+  "lastOpenFiles": [
+    "Work/Weekly Fab/Fab. 9_4_2024.md",
+    "SM Ongoing Tasks Overview.md",
+    "Work/Serialization STD.md",
+    "Work/SM/SM G3.md",
+    "Work/SM/OGN_SM Planning.md",
+    "Work/SM/SM Meeting.md",
+    "Ongoing SW.md",
+    "Task Overview SW.canvas",
+    "Work/Semi-Automatic Messages.md",
+    "Work/Weekly Fab/Fab. 2025-02-19.md",
+    "Study/RL/RL Images/Pasted image 20250215000421.png",
+    "Study/RL/RL Images/Pasted image 20250214203449.png",
+    "Study/RL/RL Images/Pasted image 20250215001849.png",
+    "Study/Digital Twin/DT Images/Pasted image 20250222020253.png",
+    "Study/Digital Twin/Digital Twin.md",
+    "Study/Digital Twin/DT Images/Pasted image 20250222013206.png",
+    "Study/RL/RL Images/Pasted image 20250214203614.png",
+    "Study/Digital Twin/DT Images/Pasted image 20250222025010.png",
+    "Study/Digital Twin/DT Images/Pasted image 20250222022542.png",
+    "Work/Weekly Fab",
+    "Study/RL/RL Images/Pasted image 20250214214055.png",
+    "Study/Digital Twin/DT Images/Pasted image 20250222021509.png",
+    "Study/Frontend Dev/Frontend Stack Intro.md",
+    "Study/RL/RL Learning Sources.md",
+    "Study/Frontend Dev/Sources/Gemini.pdf",
+    "Study/Frontend Dev/Sources",
+    "Study/Frontend Dev",
+    "Study/RL/RL Concepts.md",
+    "Work/SM",
+    "Study/RL/RL Images",
+    "Study/Digital Twin/DT Images",
+    "Study/RL",
+    "Study/Digital Twin",
+    "Study",
+    "Task Overview.canvas",
+    "Work/Trainings.md",
+    "Work/OGN_SM.md",
+    "Work/Weekly Fab/2025-02-19.md",
+    "OGN_SM.md",
+    "Work/Misc/SM.md",
+    "Work/Misc/Job Automation.md",
+    "Work/Misc/Shell Demo.md",
+    "Weekly Fab/2025-02-19.md",
+    "Frontend Dev/Frontend Stack Intro.md",
+    "Misc/SM.md",
+    "Misc/Shell Demo.md",
+    "Digital Twin/Digital Twin.md",
+    "Work/Notes Meeting 19_2_2025.md"
+  ]
+}

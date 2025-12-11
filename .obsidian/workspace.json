@@ -1,0 +1,297 @@
+{
+  "main": {
+    "id": "77e85f3f970997b1",
+    "type": "split",
+    "children": [
+      {
+        "id": "1f62187ab94f7b69",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "21e6d70138868e7d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "src/content/blog/React Basics_ar.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "React Basics_ar"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c8c5f79e0527b1b4",
+    "type": "split",
+    "children": [
+      {
+        "id": "d46aecce6a1078b0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "42af4f1ef891900d",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": true
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "8042cedd39507497",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "d481b69de8ac5693",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          },
+          {
+            "id": "981d4ae76a88fb41",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "279416c7625b4660",
+    "type": "split",
+    "children": [
+      {
+        "id": "2fd9a64f0deb3159",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "53f920f8060070a2",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Ongoing SW.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Ongoing SW"
+            }
+          },
+          {
+            "id": "5720a8812050f3b7",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Ongoing SW.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Ongoing SW"
+            }
+          },
+          {
+            "id": "df102072c4a377ae",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": true,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "4c18205f15a43f5d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Table of Contents.base",
+                "followCursor": false,
+                "showSearch": true,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Table of Contents"
+            }
+          },
+          {
+            "id": "c6412785a0953c64",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "2ec22cbc6c694988",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          },
+          {
+            "id": "552149355de5e1d2",
+            "type": "leaf",
+            "state": {
+              "type": "copilot-chat-view",
+              "state": {},
+              "icon": "message-square",
+              "title": "Copilot"
+            }
+          },
+          {
+            "id": "e056484bbe17a48a",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
+          },
+          {
+            "id": "c0e9e2f7131ad357",
+            "type": "leaf",
+            "state": {
+              "type": "mermaid-toolbar-view",
+              "state": {},
+              "icon": "trident-custom",
+              "title": "Mermaid Toolbar"
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 317.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "bases:Create new base": false,
+      "obsidian-git:Open Git source control": false,
+      "copilot:Open Copilot Chat": false,
+      "markdown-importer:Open format converter": false,
+      "audio-recorder:Start/stop recording": false,
+      "switcher:Open quick switcher": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "omnisearch:Omnisearch": false,
+      "graph:Open graph view": false,
+      "obsidian-importer:Open Importer": false,
+      "mermaid-tools:Open Mermaid Toolbar": false
+    }
+  },
+  "active": "21e6d70138868e7d",
+  "lastOpenFiles": [
+    "copilot-custom-prompts/Rewrite as tweet thread.md",
+    "copilot-custom-prompts/Rewrite as tweet.md",
+    "copilot-custom-prompts/Remove URLs.md",
+    "copilot-custom-prompts/Generate glossary.md",
+    "copilot-custom-prompts/Generate table of contents.md",
+    "copilot-custom-prompts/Make longer.md",
+    "copilot-custom-prompts/Make shorter.md",
+    "copilot-custom-prompts/Emojify.md",
+    "copilot-custom-prompts/Explain like I am 5.md",
+    "copilot-custom-prompts/Simplify.md",
+    "copilot-custom-prompts/Summarize.md",
+    "copilot-custom-prompts/Translate to Chinese.md",
+    "copilot-custom-prompts/Fix grammar and spelling.md",
+    "copilot-custom-prompts",
+    "Study/Frontend Dev/React_Developer_Course_Content_Roadmap_arabic_advanced.md",
+    "Study/Frontend Dev/React_Developer_Course_Content_Roadmap.md",
+    "Study/Frontend Dev/React_Developer_Course_Content_Roadmap_arabic.md",
+    "Study/Frontend Dev/JS_2.md",
+    "Table of Contents.base",
+    "NON-Homogenous.md",
+    "Work/R&D/Notes/AI 🤖.md",
+    "Untitled.base",
+    "Interresting/Templates and Formatting.md",
+    "Interresting/SM Ongoing Tasks Overview.canvas",
+    "Interresting/Obsidean.md",
+    "FGSSR Masters/Ideas 💡.md",
+    "copilot-custom-prompts/Fix markdown.md",
+    "Work/SM Ongoing Tasks Overview.md",
+    "conflict-files-obsidian-git.md",
+    "Work/R&D/Notes/SM G3.0/Plant Master Product Introduction.md",
+    "FGSSR Masters",
+    "Work/SM Ongoing Tasks Overview.canvas",
+    "Study/Frontend Dev/Untitled Diagram.svg",
+    "Study/Frontend Dev/Untitled Diagram 3.svg",
+    "Study/Frontend Dev/Untitled Diagram 2.svg",
+    "Study/Frontend Dev/Untitled Diagram 1.svg",
+    "Work/Weekly Fab/Sedico T&T - SM.drawio",
+    "Work/SM Testing/images",
+    "Work/SM Testing",
+    "Work/SM Testing/images/Pasted image 20250624221951.png",
+    "Study/EPLAN/Images/Pasted image 20250610140824.png",
+    "Study/EPLAN/Images/Pasted image 20250602134424.png",
+    "Study/EPLAN/Images/Pasted image 20250602134105.png",
+    "Study/EPLAN/Images/Pasted image 20250602133814.png",
+    "Study/EPLAN/Images/Pasted image 20250602133208.png",
+    "copilot-conversations",
+    "Study/AZURE",
+    "Work Origin/Site Manger Project",
+    "Business/Journal/Technical/Migrated/Mind Map.canvas",
+    "Journal/Technical/Migrated/Mind Map.canvas",
+    "Technical/Migrated/Mind Map.canvas"
+  ]
+}
