@@ -2,7 +2,7 @@
 title: React بالعربي
 description: Lorem ipsum dolor sit amet
 pubDate: Jul 15 2022
-heroImage: ../../assets/react-basics.png
+heroImage: ../../assets/react-basics.jpg
 ---
 
 # React اساسيات
