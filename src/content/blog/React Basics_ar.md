@@ -2,7 +2,7 @@
 title: React بالعربي
 description: Lorem ipsum dolor sit amet
 pubDate: Jul 15 2022
-heroImage: ../../assets/blog-placeholder-4.jpg
+heroImage: ../../assets/react-basics.png
 ---
 
 # React اساسيات
@@ -16,8 +16,7 @@ heroImage: ../../assets/blog-placeholder-4.jpg
 ## 2. شويه اساسيات 
 
 قبل ما نبدأ (React)، لازم نتأكد من الأساسات.
-
-### أ) SPA vs MPA: إيه الفرق وليه العالم راح للـ SPA؟
+### 2.1) SPA vs MPA: إيه الفرق وليه العالم راح للـ SPA؟
 
 زمان، كانت المواقع شغالة بنظام **MPA (Multi-Page Applications)**.
 *   **يعني إيه؟** يعني كل ما تدوس على لينك، المتصفح يروح للـ Server يقوله "هات الصفحة دي"، والـ Server يرجعله صفحة HTML كاملة جديدة.
@@ -36,7 +35,7 @@ heroImage: ../../assets/blog-placeholder-4.jpg
 
 ---
 
-### ب) إعداد العدة: Webpack ولا Vite؟
+### 2.2) إعداد العدة: Webpack ولا Vite؟
 
 عشان تكتب React، محتاج "Bundler" يجمع ملفاتك ويشغلها. عندك اتنين كبار:
 
