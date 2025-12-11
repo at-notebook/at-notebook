@@ -5,7 +5,7 @@ pubDate: Jul 15 2022
 heroImage: ../../assets/blog-placeholder-4.jpg
 ---
 
-# **React اساسيات**
+# React اساسيات
 
 ## **1. مقدمة: 
 
@@ -46,7 +46,7 @@ heroImage: ../../assets/blog-placeholder-4.jpg
 
 ---
 
-## **3. JavaScript (ES6+): **
+## 3. JavaScript (ES6+): 
 
 لان React كله JavaScript،  أهم مفاهيم لازم تتقنها.
 
@@ -81,7 +81,7 @@ const colors = ['red', 'blue'];
 const [primary, secondary] = colors;
 ```
 
-### **د) Spread Operator `...`**
+### د) Spread Operator `...`
 ده "الجوكر" بتاعنا. بنستخدمه عشان ننسخ الـ Data أو ندمجها من غير ما نعدل في الأصل (Immutability).
 
 ```javascript
@@ -91,7 +91,7 @@ const newUser = { ...oldUser, age: 26 };
 // newUser بقا { name: 'Amr', age: 26 } والقديم زي ما هو
 ```
 
-### **هـ) Array Methods (Map, Filter, Reduce)**
+### هـ) Array Methods (Map, Filter, Reduce)
 دول عيشك وملحك في React.
 *   **`map`:** بتحول "Data" لـ "UI". (معايا array أسماء، عايز أخليهم <li>).
 *   **`filter`:** بتصفي البيانات. (عايز المنتجات اللي سعرها أقل من 100 جنيه).
@@ -101,7 +101,7 @@ const newUser = { ...oldUser, age: 26 };
 *   `export default`: بتصدر حاجة واحدة رئيسية من الملف.
 *   `export`: بتصدر كذا حاجة (Named Export).
 
-### **ز) Promises & Async/Await**
+### ز) Promises & Async/Await
 عشان لما تروح تجيب داتا من الـ API، الموقع ما يهنجش لحد ما الداتا تيجي.
 
 ```javascript
@@ -118,9 +118,9 @@ async function fetchData() {
 
 ---
 
-## **4. React: البداية الحقيقية**
+## 4. React: البداية الحقيقية
 
-### **يعني إيه React أصلاً؟**
+### يعني إيه React أصلاً؟
 هو مكتبة (Library) مش Framework (زي Angular)، بتركز على حاجة واحدة بس: **بناء واجهة المستخدم (UI) من خلال Components**.
 فكرته العبقرية هي **Virtual DOM**: نسخة خفيفة من الصفحة في الذاكرة، React بيعدل فيها الأول، ويشوف إيه اللي اتغير، ويروح يعدله في الصفحة الحقيقية. ده اللي بيخليه سريع جداً.
 
