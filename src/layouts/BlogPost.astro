@@ -1,19 +1,44 @@
 ---
+import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
 import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import FormattedDate from "../components/FormattedDate.astro";
+import Header from "../components/Header.astro";
 
-type Props = CollectionEntry<"blog">["data"];
+// 1. Update Props to accept a language (defaults to 'ar')
+type Props = CollectionEntry<"blog">["data"] & { lang?: string };
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const {
+	title,
+	description,
+	pubDate,
+	updatedDate,
+	heroImage,
+	lang = "ar", // Default to Arabic
+} = Astro.props;
+
+// 2. Calculate direction based on language
+const direction = lang === "ar" ? "rtl" : "ltr";
 ---
 
-<html lang="en">
+<html lang={lang} dir={direction}>
 	<head>
 		<BaseHead title={title} description={description} />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;700&display=swap"
+			rel="stylesheet"
+		/>
+
 		<style>
+			/* Apply Arabic font if language is AR */
+			html[lang="ar"] {
+				font-family: "IBM Plex Sans Arabic", sans-serif;
+			}
+
 			main {
 				width: calc(100% - 2em);
 				max-width: 100%;
@@ -29,38 +54,43 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				box-shadow: var(--box-shadow);
 			}
 			.prose {
-				width: 100%;
-				max-width: 1000px; /* INCREASED WIDTH */
+				width: 1080px;
+				max-width: calc(100% - 2em);
 				margin: auto;
 				padding: 1em;
 				color: rgb(var(--gray-dark));
 
-				/* RTL SETTINGS */
-				direction: rtl;
-				text-align: right;
+				/* Base RTL support for the text */
+				unicode-bidi: embed;
 			}
+
+			/* --- CRITICAL FIX FOR CODE BLOCKS --- */
+
+			/* 1. Code Blocks (The large code boxes) */
+			/* Forces code to always look Left-to-Right and align Left */
+			.prose pre {
+				direction: ltr !important;
+				text-align: left !important;
+				unicode-bidi: normal;
+			}
+
+			/* 2. Inline Code (Small highlights inside text) */
+			.prose code {
+				direction: ltr;
+				unicode-bidi: embed; /* Isolates English code from Arabic sentence */
+			}
+
+			/* --- END FIX --- */
+
 			.title {
 				margin-bottom: 1em;
 				padding: 1em 0;
 				text-align: center;
 				line-height: 1;
 			}
-
-			/* FIXING HEADER SIZES */
 			.title h1 {
-				font-size: 2.5rem; /* Reduced from default 4em */
 				margin: 0 0 0.5em 0;
 			}
-			.prose h1 {
-				font-size: 2rem;
-			}
-			.prose h2 {
-				font-size: 1.75rem;
-			}
-			.prose h3 {
-				font-size: 1.5rem;
-			}
-
 			.date {
 				margin-bottom: 0.5em;
 				color: rgb(var(--gray));
@@ -68,22 +98,20 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			.last-updated-on {
 				font-style: italic;
 			}
-
-			/* FORCE CODE BLOCKS TO BE LTR (ENGLISH) */
-			.prose pre,
-			.prose code {
-				direction: ltr;
-				text-align: left;
-				unicode-bidi: embed;
+			.prose h1 {
+				font-size: 2.25em;
 			}
-
-			/* FIX LISTS FOR RTL */
-			.prose ul,
-			.prose ol {
-				margin-right: 1.5em;
-				margin-left: 0;
-				padding-right: 1em;
-				padding-left: 0;
+			.prose h2 {
+				font-size: 1.75em;
+			}
+			.prose h3 {
+				font-size: 1.5em;
+			}
+			.prose h4 {
+				font-size: 1.25em;
+			}
+			.prose h5 {
+				font-size: 1em;
 			}
 		</style>
 	</head>
@@ -95,7 +123,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				<div class="hero-image">
 					{
 						heroImage && (
-							<img
+							<Image
 								width={1020}
 								height={510}
 								src={heroImage}
@@ -120,6 +148,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 						<h1>{title}</h1>
 						<hr />
 					</div>
+
 					<slot />
 				</div>
 			</article>
