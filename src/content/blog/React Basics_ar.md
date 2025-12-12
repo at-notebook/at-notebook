@@ -204,12 +204,12 @@ function Form() {
 ### Conditional Rendering (أظهر إيه امتى؟)
 بلاش `if` و `else` جوه الـ JSX عشان مش هتنفع. استخدم دول:
 
-1.  **Ternary Operator `? :`**: (لو آه اعمل كذا، لو لأ اعمل كذا).
+- **Ternary Operator `? :`**: (لو آه اعمل كذا، لو لأ اعمل كذا).
     ```javascript
     {isLoggedIn ? <UserDashboard /> : <LoginButton />}
     ```
 
-2.  **Logical AND `&&`**: (لو الشرط موجود، اظهر ده).
+- **Logical AND `&&`**: (لو الشرط موجود، اظهر ده).
     ```javascript
     {hasError && <ErrorMessage />}
     ```
@@ -236,7 +236,7 @@ function TodoList() {
 
 ## Hooks ✨
 
-من ساعة React 16.8، الـ Hooks غيرت الدنيا. هي دوال بتبدأ بـ `use` بتخليك تستخدم مميزات React جوه الـ Functional Components.
+من  React 16.8، الـ Hooks غيرت الدنيا. هي دوال بتبدأ بـ `use` بتخليك تستخدم مميزات React جوه الـ Functional Components.
 
 ### - `useEffect`: 
 عايز تجيب داتا من API؟ تشغل تايمر؟ تعدل في الـ DOM يدوياً؟ ده كله اسمه **Side Effects**.
@@ -321,9 +321,9 @@ export function useOnlineStatus() {
 ###   الحل لـ Prop Drilling (Context API)
 بدل ما تقعد تباصي الـ Props من الجد للأب للابن للحفيد (Prop Drilling)، الـ Context بيعمل "سحابة" داتا فوق الـ Components. أي حد محتاج الداتا (زي الـ Theme أو User)، يقدر ياخدها.
 
-10.  **Create:** `const ThemeContext = createContext('light');`
-11.  **Provider:** `<ThemeContext.Provider value="dark"> ... </ThemeContext.Provider>`
-12.  **Consume:** `const theme = useContext(ThemeContext);`
+- **Create:** `const ThemeContext = createContext('light');`
+- **Provider:** `<ThemeContext.Provider value="dark"> ... </ThemeContext.Provider>`
+- **Consume:** `const theme = useContext(ThemeContext);`
 
 ### `useReducer`: 
 لو عندك State معقدة (زي عربية تسوق فيها منتجات كتير، إضافة، حذف، تعديل كميات)، `useState` هتكون فوضوية.
@@ -331,7 +331,7 @@ export function useOnlineStatus() {
 
 ---
 
-## 10. نصائح ومسار المستقبل 🌟
+## نصائح ومسار المستقبل 🌟
 
 ### نصائح هتفرق في مستواك:
 1.  **Design for the User:** مش مهم الكود حلو قد إيه لو الموقع استخدامه صعب.
