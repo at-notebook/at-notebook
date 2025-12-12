@@ -1,6 +1,6 @@
 ---
 title: React بالعربي
-description: Lorem ipsum dolor sit amet
+description: البوست ده تجميعة معلومات لأي حد عايز يتعلم React، سواء كنت لسه في الاول فيه أو حابب تاخد فكره متجمعه في مكان واحد.
 pubDate: Jul 15 2022
 heroImage: ../../assets/react-basics.jpg
 ---
