@@ -5,7 +5,6 @@ pubDate: Jul 15 2022
 heroImage: ../../assets/react-basics.jpg
 ---
 
-# React اساسيات
 
 ## مقدمة: 
 
