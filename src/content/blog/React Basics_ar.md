@@ -185,7 +185,7 @@ function Counter() {
 
 ## Events, Lists, Conditionals
 
-### 4.1) التعامل مع الـ Events
+### التعامل مع الـ Events
 شبه الـ HTML بس camelCase.
 *   `onclick` -> `onClick`
 *   `onsubmit` -> `onSubmit`

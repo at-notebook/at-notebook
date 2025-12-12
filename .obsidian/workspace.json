@@ -220,7 +220,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 317.5
+    "width": 322.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -240,7 +240,7 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "2ec22cbc6c694988",
+  "active": "21e6d70138868e7d",
   "lastOpenFiles": [
     "src/assets/react-basics-temp.jpg",
     "resize_img.ps1",
