@@ -197,11 +197,9 @@ hr {
 	white-space: nowrap;
 }
 
-/* Automatic RTL/LTR text direction */
+/* Automatic RTL/LTR text direction for text elements */
 .prose p,
 .prose li,
-.prose ul,
-.prose ol,
 .prose h1,
 .prose h2,
 .prose h3,
@@ -211,4 +209,19 @@ hr {
 .prose blockquote {
 	unicode-bidi: plaintext;
 	text-align: start;
+}
+
+/* RTL support for lists - also use plaintext bidi */
+.prose ul,
+.prose ol {
+	unicode-bidi: plaintext;
+	text-align: start;
+	list-style-position: inside;
+}
+
+/* Keep code blocks LTR */
+.prose code,
+.prose pre {
+	direction: ltr;
+	unicode-bidi: isolate;
 }
