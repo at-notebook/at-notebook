@@ -38,8 +38,8 @@ heroImage: ../../assets/react-basics.jpg
 
 عشان تكتب React، محتاج "Bundler" يجمع ملفاتك ويشغلها. عندك اتنين كبار:
 
-1.  **Webpack**
-2.  **Vite: ده اللي هنكمل بيه**
+- **Webpack**
+- **Vite: ده اللي هنكمل بيه**
 
 ---
 
@@ -133,9 +133,9 @@ function Welcome({ name }) {
 ```
 
 #### قوانين JSX
-1.  لازم ترجع **Element واحد بس** كبير (أب) شايل جواه كل حاجة. (أو استخدم `<>...</>` Fragments).
-2.  لازم تقفل كل التاجات `<img />` مش `<img>`.
-3.  `class` بقت `className` (عشان class كلمة محجوزة في JS).
+- لازم ترجع **Element واحد بس** كبير (أب) شايل جواه كل حاجة. (أو استخدم `<>...</>` Fragments)
+-  لازم تقفل كل التاجات `<img />` مش `<img>`.
+- الـ  `class` بقت `className` (عشان class كلمة محجوزة في JS).
 
 ---
 
@@ -237,7 +237,7 @@ function TodoList() {
 
 من  React 16.8، الـ Hooks غيرت الدنيا. هي دوال بتبدأ بـ `use` بتخليك تستخدم مميزات React جوه الـ Functional Components.
 
-### - `useEffect`: 
+### `useEffect`: 
 عايز تجيب داتا من API؟ تشغل تايمر؟ تعدل في الـ DOM يدوياً؟ ده كله اسمه **Side Effects**.
 `useEffect` بتاخد دالة، و Array اسمه **Dependency Array**.
 
@@ -256,7 +256,7 @@ useEffect(() => {
 }, []); // [] عشان تشتغل مرة واحدة بس
 ```
 
-###  - `useRef`: 
+###  `useRef`: 
 ليها استخدامين:
 1.  **تمسك عنصر DOM:** زي لما تعوز تعمل Focus على Input أول ما تفتح.
 2.  **تخزن قيمة:** بس القيمة دي لما تتغير **مش بتعمل Re-render**. (تخيلها زي متغير خفي).
@@ -337,9 +337,9 @@ export function useOnlineStatus() {
 2.  نـ**Learn Tools:** اتعلم تستخدم React DevTools في المتصفح، هتوفر عليك ساعات Debugging.
 
 ### الخطوات التالية (Roadmap):
-1.  **طبق بإيدك:** ابني مشاريع (To-Do List, Weather App, Blog).
-2.  نـ**React Router:** عشان تعمل تنقل بين الصفحات في الـ SPA. (مكتبة `react-router-dom`).
-3.  نـ**State Management:** للمشاريع الكبيرة، بص على **Zustand** (سهل جداً) أو **Redux Toolkit** (الستاندرد).
-4.  نـ**Frameworks:** بعد ما تتقن React، انتقل لـ **Next.js**. ده اللي الشركات بتطلبه دلوقتي، بيديك Server-Side Rendering و SEO ممتاز.
+- **طبق بإيدك:** ابني مشاريع (To-Do List, Weather App, Blog)
+-  نـ**React Router:** عشان تعمل تنقل بين الصفحات في الـ SPA. (مكتبة `react-router-dom`)
+-  نـ**State Management:** للمشاريع الكبيرة، بص على **Zustand** (سهل جداً) أو **Redux Toolkit** (الستاندرد)
+-  نـ**Frameworks:** بعد ما تتقن React، انتقل لـ **Next.js**. ده اللي الشركات بتطلبه دلوقتي، بيديك Server-Side Rendering و SEO ممتاز.
 
 ---
