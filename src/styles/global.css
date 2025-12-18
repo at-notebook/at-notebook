@@ -200,6 +200,8 @@ hr {
 /* Automatic RTL/LTR text direction */
 .prose p,
 .prose li,
+.prose ul,
+.prose ol,
 .prose h1,
 .prose h2,
 .prose h3,
