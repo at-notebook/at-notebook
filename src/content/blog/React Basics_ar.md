@@ -41,6 +41,19 @@ heroImage: ../../assets/react-basics.jpg
 - **Webpack**
 - **Vite: ده اللي هنكمل بيه**
 
+عشان تبدأ مشروع جديد، افتح الـ Terminal واكتب:
+
+```bash
+npm create vite@latest my-app -- --template react
+cd my-app
+npm install
+npm run dev
+```
+
+الـ Files اللي هتشوفها:
+*   الـ `src/main.jsx`: ده المدخل الرئيسي (Entry Point) اللي بيربط React بالـ DOM.
+*   الـ `src/App.jsx`: ده الـ Component الرئيسي بتاعك، وغالباً هتمسح اللي فيه وتبدأ تكتب كودك.
+
 ---
 
 ## الـJavaScript (ES6+): 
@@ -121,7 +134,7 @@ async function fetchData() {
 هو مكتبة (Library) مش Framework (زي Angular)، بتركز على حاجة واحدة بس: **بناء واجهة المستخدم (UI) من خلال Components**.
 فكرته العبقرية هي **Virtual DOM**: نسخة خفيفة من الصفحة في الذاكرة، React بيعدل فيها الأول، ويشوف إيه اللي اتغير، ويروح يعدله في الصفحة الحقيقية. ده اللي بيخليه سريع جداً.
 
-### Components & JSX
+### الـ Components & JSX
 أي صفحة في React عبارة عن مكعبات صغيرة اسمها Components.
 الـ Component هو دالة JavaScript بترجع HTML (بس بنسميه **JSX**).
 
@@ -231,13 +244,39 @@ function TodoList() {
 }
 ```
 
+### الـ Forms & Controlled Components
+في الـ HTML العادي، الـ Input هو اللي ماسك قيمته (State بتاعته). في React، احنا بنحب نتحكم في كل حاجة.
+بنربط قيمة الـ Input بـ State عندنا، ولما اليوزر يكتب، بنحدث الـ State دي. دي اسمها **Controlled Components**.
+
+```javascript
+// الـ Controlled Component
+function SimpleForm() {
+  const [name, setName] = useState('');
+
+  return (
+    <input 
+      type="text" 
+      value={name} // 1. القيمة جاية من الـ State
+      onChange={(e) => setName(e.target.value)} // 2. أي تغيير بيسمع في الـ State
+    />
+  );
+}
+```
+
+### الـ Styling (التنسيق)
+عندك كذا طريقة لتنسيق الـ Components:
+1.  الـ **Inline Styles:** (مش مستحبة أوي) `style={{ color: 'red' }}`.
+2.  الـ **CSS Files:** اعمل import للملف عادي `import './App.css'`.
+3.  الـ **CSS Modules:** (للشغل النضيف) بتعمل ملف `Button.module.css` وتعمل import classes from it.
+4.  الـ **Frameworks:** زي TailwindCSS (الأشهر حالياً).
+
 ---
 
 ## الـHooks ✨
 
 من  React 16.8، الـ Hooks غيرت الدنيا. هي دوال بتبدأ بـ `use` بتخليك تستخدم مميزات React جوه الـ Functional Components.
 
-### `useEffect`: 
+### الـ `useEffect`: 
 عايز تجيب داتا من API؟ تشغل تايمر؟ تعدل في الـ DOM يدوياً؟ ده كله اسمه **Side Effects**.
 `useEffect` بتاخد دالة، و Array اسمه **Dependency Array**.
 
@@ -256,7 +295,7 @@ useEffect(() => {
 }, []); // [] عشان تشتغل مرة واحدة بس
 ```
 
-###  `useRef`: 
+### الـ `useRef`: 
 ليها استخدامين:
 1.  **تمسك عنصر DOM:** زي لما تعوز تعمل Focus على Input أول ما تفتح.
 2.  **تخزن قيمة:** بس القيمة دي لما تتغير **مش بتعمل Re-render**. (تخيلها زي متغير خفي).
@@ -327,6 +366,67 @@ export function useOnlineStatus() {
 ### الـ`useReducer`: 
 لو عندك State معقدة (زي عربية تسوق فيها منتجات كتير، إضافة، حذف، تعديل كميات)، `useState` هتكون فوضوية.
 الـ`useReducer` بيخليك تجمع كل طرق التعديل (Actions) في دالة واحدة اسمها **Reducer**. (نفس فكرة Redux).
+
+---
+
+## تطبيق عملي: مشروع To-Do بسيط ✅
+
+تعال نجمع كل اللي فات ده في كود واحد. هنعمل برنامج مهام بسيط.
+
+**الخطوات:**
+1.  الـ `npm create vite@latest todo-app`
+2.  امسح كل حاجة في `App.jsx` وحط الكود ده:
+
+```javascript
+import { useState } from 'react';
+import './App.css'; // افترض ان فيه شوية تنسيقات بسيطة هنا
+
+function App() {
+  const [todos, setTodos] = useState([]);
+  const [input, setInput] = useState('');
+
+  const addTodo = () => {
+    if (!input) return;
+    const newTodo = { id: Date.now(), text: input, completed: false };
+    setTodos([...todos, newTodo]);
+    setInput(''); // فضي الـ Input
+  };
+
+  const toggleTodo = (id) => {
+    setTodos(todos.map(t => 
+      t.id === id ? { ...t, completed: !t.completed } : t
+    ));
+  };
+
+  return (
+    <div className="app-container">
+      <h1>قائمة المهام</h1>
+      <div className="input-group">
+        <input 
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          placeholder="وراك إيه النهارده؟"
+        />
+        <button onClick={addTodo}>إضافة</button>
+      </div>
+
+      <ul>
+        {todos.map(todo => (
+          <li 
+            key={todo.id} 
+            onClick={() => toggleTodo(todo.id)}
+            style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}
+          >
+            {todo.text}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default App;
+```
 
 ---
 
