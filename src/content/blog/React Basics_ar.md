@@ -136,7 +136,11 @@ async function getCoffee() {
 
 ## أول خطوة ليا جوه الـ React
 
+عشان نفهم أحسن، قررت أطبق عملي واحنا ماشيين. **هنعمل سوا أبلكيشن لـ "إدارة المهام" (Task Manager).**
+كل ما نتعلم حاجة، هنزودها في المشروع بتاعنا.
+
 ### يعني إيه React أصلاً؟
+
 هو مكتبة (Library) مش Framework (زي Angular)، بتركز على حاجة واحدة بس: **بناء واجهة المستخدم (UI) من خلال Components**.
 فكرته العبقرية هي **Virtual DOM**: نسخة خفيفة من الصفحة في الذاكرة، React بيعدل فيها الأول، ويشوف إيه اللي اتغير، ويروح يعدله في الصفحة الحقيقية. ده اللي بيخليه سريع جداً.
 
@@ -145,9 +149,13 @@ async function getCoffee() {
 الـ Component هو دالة JavaScript بترجع HTML (بس بنسميه **JSX**).
 
 ```javascript
-// ده Component
-function Welcome({ name }) {
-  return <h1>Welcome, {name}!</h1>; // ده JSX
+// ده Component بسيط لكرت المهمة
+function TaskCard() {
+  return (
+    <div className="task-card">
+      <h3>ذاكر React</h3>
+    </div>
+  );
 }
 ```
 
@@ -163,14 +171,23 @@ function Welcome({ name }) {
 *   هي للقراءة فقط (**Read-only**). الابن ما ينفعش يغير الـ Props اللي جاياه، لكن يقدر يستخدمها.
 
 ```javascript
-// الأب
+// الأب (التطبيق كله)
 function App() {
-  return <Greeting name="Amr" />;
+  return (
+    <div>
+      <TaskCard title="ذاكر React" />
+      <TaskCard title="نام بدري" />
+    </div>
+  );
 }
 
-// الابن
-function Greeting(props) {
-  return <h1>Hello, {props.name}</h1>;
+// الابن (الكرت)
+function TaskCard(props) {
+  return (
+    <div className="task-card">
+      <h3>{props.title}</h3>
+    </div>
+  );
 }
 ```
 
@@ -183,21 +200,27 @@ function Greeting(props) {
 ```javascript
 import { useState } from 'react';
 
-function Counter() {
-  // بنعرف State اسمها count وقيمتها الابتدائية 0
-  const [count, setCount] = useState(0);
+function TaskManager() {
+  // القائمة بتاعتنا بقت في State عشان لما تزيد، الصفحة تتحدث
+  const [tasks, setTasks] = useState(["ذاكر React", "اشرب قهوة"]);
 
   return (
-    <button onClick={() => setCount(count + 1)}>
-      Link Clicks: {count}
-    </button>
+    <div>
+      <button onClick={() => setTasks([...tasks, "مهمة جديدة"])}>
+        زود مهمة
+      </button>
+      
+      {tasks.map((task, index) => (
+        <TaskCard key={index} title={task} />
+      ))}
+    </div>
   );
 }
 ```
 
 **⚠️ تحذير هام جداً:**
-أبداً، أبداً، أبداً ما تعدلش الـ State مباشرة! `state.value = 5` دي جريمة.
-استخدم الدالة اللي جاية معاه `setState` أو `setCount` عشان React يحس بالتغيير.
+أبداً، أبداً، أبداً ما تعدلش الـ State مباشرة! `tasks.push("New")` دي جريمة.
+استخدم الدالة اللي جاية معاه `setTasks` عشان React يحس بالتغيير.
 
 ---
 
@@ -251,20 +274,30 @@ function TodoList() {
 ```
 
 ### الـ Forms & Controlled Components
-في الـ HTML العادي، الـ Input هو اللي ماسك قيمته (State بتاعته). في React، احنا بنحب نتحكم في كل حاجة.
-بنربط قيمة الـ Input بـ State عندنا، ولما اليوزر يكتب، بنحدث الـ State دي. دي اسمها **Controlled Components**.
+دلوقتي عايزين نكتب المهمة بنفسنا مش بس ندوس زرار.
+
+في الـ HTML العادي، الـ Input هو اللي ماسك قيمته. في React، احنا بنحب نتحكم في كل حاجة (Controlled Components).
+هنعمل متغير للـ Input ونربطه بيه.
 
 ```javascript
-// الـ Controlled Component
-function SimpleForm() {
-  const [name, setName] = useState('');
+function AddTaskForm() {
+  const [newTask, setNewTask] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("هضيف مهمة:", newTask);
+    setNewTask(""); // نفضي الخانة تاتي
+  };
 
   return (
-    <input 
-      type="text" 
-      value={name} // 1. القيمة جاية من الـ State
-      onChange={(e) => setName(e.target.value)} // 2. أي تغيير بيسمع في الـ State
-    />
+    <form onSubmit={handleSubmit}>
+      <input 
+        type="text" 
+        value={newTask} 
+        onChange={(e) => setNewTask(e.target.value)} 
+      />
+      <button>إضافة</button>
+    </form>
   );
 }
 ```
@@ -283,32 +316,29 @@ function SimpleForm() {
 من  React 16.8، الـ Hooks غيرت الدنيا. هي دوال بتبدأ بـ `use` بتخليك تستخدم مميزات React جوه الـ Functional Components.
 
 ### الـ `useEffect`: 
-عايز تجيب داتا من API؟ تشغل تايمر؟ تعدل في الـ DOM يدوياً؟ ده كله اسمه **Side Effects**.
-`useEffect` بتاخد دالة، و Array اسمه **Dependency Array**.
-
-*   `useEffect(() => { ... })`: تشتغل بعد **كل** render. (خطر! ممكن تعمل loop).
-*   `useEffect(() => { ... }, [])`: تشتغل **مرة واحدة بس** أول ما الـ Component يظهر (Mount).
-*   `useEffect(() => { ... }, [count])`: تشتغل أول مرة، وكل مرة الـ `count` يتغير.
+عايز تحفظ المهام دي عشان لما تعمل Refresh ما تضيعش؟ هنستخدم `useEffect`.
+ده المكان اللي بنتعامل فيه مع حاجات بره الصفحة (زي الـ LocalStorage او API).
 
 ```javascript
+// هتشتغل كل ما الـ tasks تتغير
 useEffect(() => {
-  const timer = setInterval(() => {
-    console.log('Timer Tick');
-  }, 1000);
-
-  // Cleanup Function: بتشتغل لما الـ Component يتمسح
-  return () => clearInterval(timer);
-}, []); // [] عشان تشتغل مرة واحدة بس
+  localStorage.setItem("my-tasks", JSON.stringify(tasks));
+}, [tasks]); 
 ```
 
 ### الـ `useRef`: 
 ليها استخدامين:
-1.  **تمسك عنصر DOM:** زي لما تعوز تعمل Focus على Input أول ما تفتح.
-2.  **تخزن قيمة:** بس القيمة دي لما تتغير **مش بتعمل Re-render**. (تخيلها زي متغير خفي).
+1.  **تمسك عنصر DOM:** مثلاً عايز أول ما تفتح البرنامج، الكتابة تكون جوه الـ Input علطول (Focus).
+2.  **تخزن قيمة:** بس القيمة دي لما تتغير **مش بتعمل Re-render**.
 
 ```javascript
 const inputRef = useRef(null);
-// عشان تعمل focus: inputRef.current.focus()
+
+useEffect(() => {
+  inputRef.current.focus(); // أول ما تفتح، اقف جوه الخانة
+}, []);
+
+return <input ref={inputRef} ... />;
 ```
 
 ---
@@ -377,56 +407,73 @@ export function useOnlineStatus() {
 
 ## أول مشروع عملته: To-Do List ✅
 
-جمعت كل اللي ذاكرته ده وحاولت أعمل بيه برنامج مهام بسيط.
+تعالوا نركب كل المكعبات دي مع بعض في `App.jsx`.
 
 **الخطوات:**
-1.  الـ `npm create vite@latest todo-app`
-2.  امسح كل حاجة في `App.jsx` وحط الكود ده:
+1.  `npm create vite@latest todo-app`
+2.  هنكتب الكود ده اللي بيجمع: State (عشان القائمة)، Inputs (عشان الإضافة)، و Effects (عشان الحفظ).
 
 ```javascript
-import { useState } from 'react';
-import './App.css'; // افترض ان فيه شوية تنسيقات بسيطة هنا
+import { useState, useEffect, useRef } from 'react';
+import './App.css';
 
 function App() {
-  const [todos, setTodos] = useState([]);
-  const [input, setInput] = useState('');
+  // 1. الـ State: القائمة بتاعتنا
+  const [tasks, setTasks] = useState(() => {
+    // بنحاول نجيب اللي متخزن الاول
+    const saved = localStorage.getItem("my-tasks");
+    return saved ? JSON.parse(saved) : [];
+  });
+  
+  const [newTask, setNewTask] = useState("");
+  const inputRef = useRef(null);
 
-  const addTodo = () => {
-    if (!input) return;
-    const newTodo = { id: Date.now(), text: input, completed: false };
-    setTodos([...todos, newTodo]);
-    setInput(''); // فضي الـ Input
+  // 2. الـ Effect: نحفظ أي تغيير
+  useEffect(() => {
+    localStorage.setItem("my-tasks", JSON.stringify(tasks));
+  }, [tasks]);
+
+  // focus أول ما نفتح
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []);
+
+  const handleAdd = () => {
+    if (!newTask) return;
+    setTasks([...tasks, { id: Date.now(), title: newTask, done: false }]);
+    setNewTask("");
   };
 
-  const toggleTodo = (id) => {
-    setTodos(todos.map(t => 
-      t.id === id ? { ...t, completed: !t.completed } : t
-    ));
+  const toggleTask = (id) => {
+    setTasks(tasks.map(t => t.id === id ? { ...t, done: !t.done } : t));
   };
 
   return (
-    <div className="app-container">
-      <h1>قائمة المهام</h1>
-      <div className="input-group">
+    <div className="container">
+      <h1>مدير المهام الخاص بي</h1>
+      
+      <div className="add-task">
         <input 
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          placeholder="وراك إيه النهارده؟"
+          ref={inputRef}
+          value={newTask}
+          onChange={e => setNewTask(e.target.value)}
+          placeholder="وراك إيه؟" 
         />
-        <button onClick={addTodo}>إضافة</button>
+        <button onClick={handleAdd}>إضافة</button>
       </div>
 
-      <ul>
-        {todos.map(todo => (
-          <li 
-            key={todo.id} 
-            onClick={() => toggleTodo(todo.id)}
-            style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}
+      <div className="list">
+        {tasks.map(task => (
+          <div 
+            key={task.id} 
+            className={`task-card ${task.done ? 'done' : ''}`}
+            onClick={() => toggleTask(task.id)}
           >
-            {todo.text}
-          </li>
+            <h3>{task.title}</h3>
+            <span>{task.done ? "✅" : "⏳"}</span>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }
