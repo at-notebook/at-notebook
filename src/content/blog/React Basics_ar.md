@@ -1,8 +1,8 @@
 ---
 title: React بالعربي
 description: React 101
-pubDate: Jul 15 2022
-heroImage: ../../assets/react-basics.jpg
+pubDate: Oct 15 2025
+#heroImage: ../../assets/react-basics.jpg
 ---
 
 ## حاجات هتلاقي إنك محتاجها قبل ما أبدأ
